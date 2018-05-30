@@ -51,6 +51,14 @@ public class ContactPerson {
         return homePhone;
     }
 
+    public String getWorkPhone() {
+        return workPhone;
+    }
+
+    public void setWorkPhone(String workPhone) {
+        this.workPhone = workPhone;
+    }
+
     public void setHomePhone(String homePhone) {
         this.homePhone = homePhone;
     }
