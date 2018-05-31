@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ContactPersonController">
+   <children>
+      <VBox layoutX="199.0" layoutY="17.0" spacing="10.0">
+         <children>
+            <TextField fx:id="nameText" layoutX="113.0" layoutY="50.0" promptText="Name" />
+            <TextField fx:id="nickNameText" layoutX="113.0" layoutY="75.0" promptText="Nickname" />
+            <TextField fx:id="addressText" layoutX="113.0" layoutY="100.0" promptText="Pae street 55 - 20" />
+            <TextField fx:id="cellPhoneText" layoutX="113.0" layoutY="175.0" promptText="+372 555-555-55" />
+            <TextField fx:id="emailText" layoutX="113.0" layoutY="200.0" promptText="Email@site.com" />
+            <TextField fx:id="birthDateText" layoutX="113.0" layoutY="225.0" promptText="01-01-1950" />
+            <TextField fx:id="webSiteText" layoutX="113.0" layoutY="250.0" promptText="Website.com" />
+            <TextField fx:id="professionText" layoutX="113.0" layoutY="275.0" promptText="Title" />
+         </children>
+      </VBox>
+      <VBox layoutX="457.0" layoutY="11.0" prefHeight="119.0" prefWidth="733.0" spacing="10.0">
+         <children>
+            <Label layoutX="308.0" layoutY="46.0" text="Result console" />
+            <TextArea fx:id="resultArea" prefHeight="94.0" prefWidth="669.0" promptText="Result" />
+         </children>
+      </VBox>
+      <HBox layoutX="28.0" layoutY="418.0" spacing="10.0" />
+      <HBox layoutX="871.0" layoutY="112.0" spacing="62.0" />
+      <HBox layoutX="871.0" layoutY="50.0" spacing="75.0" />
+      <VBox layoutX="24.0" layoutY="365.0" spacing="10.0">
+         <children>
+            <Label layoutX="25.0" layoutY="346.0" text="Contact ID" />
+            <TextField fx:id="contIdText" layoutX="25.0" layoutY="361.0" prefHeight="25.0" prefWidth="69.0" promptText="#ID" />
+            <Button fx:id="searchContBtn" layoutX="18.0" layoutY="403.0" mnemonicParsing="false" onAction="#searchContact" text="Search" />
+         </children>
+      </VBox>
+      <Button fx:id="deleteContBtn" layoutX="24.0" layoutY="455.0" mnemonicParsing="false" onAction="#deleteContact" prefHeight="25.0" prefWidth="63.0" text="Delete" />
+      <VBox layoutX="24.0" layoutY="20.0" spacing="20.0">
+         <children>
+            <Label layoutX="74.0" layoutY="116.0" text="Name" />
+            <Label layoutX="74.0" layoutY="225.0" text="Nickname" />
+            <Label layoutX="102.0" layoutY="259.0" text="Address" />
+            <Label layoutX="76.0" layoutY="364.0" text="Cell phone" />
+            <Label layoutX="84.0" layoutY="389.0" text="Email" />
+            <Label layoutX="76.0" layoutY="420.0" text="Birth date" />
+            <Label layoutX="84.0" layoutY="455.0" text="Website" />
+            <Label layoutX="76.0" layoutY="483.0" text="Profession" />
+         </children>
+      </VBox>
+      <Button fx:id="addContBtn" layoutX="24.0" layoutY="308.0" mnemonicParsing="false" onAction="#insertContact" text="Add contact" />
+      <Separator layoutX="436.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="23.0" />
+      <Separator layoutX="-2.0" layoutY="345.0" prefHeight="4.0" prefWidth="447.0" />
+      <Button fx:id="searchContsBtn" layoutX="114.0" layoutY="425.0" mnemonicParsing="false" onAction="#searchContacts" prefHeight="55.0" prefWidth="171.0" text="Search all contacts" />
+      <Button fx:id="updateContBtn" layoutX="295.0" layoutY="390.0" mnemonicParsing="false" onAction="#updateContactEmail" text="Update" />
+      <TextField fx:id="newEmailText" layoutX="114.0" layoutY="391.0" promptText="New email address" />
+      <Label layoutX="114.0" layoutY="365.0" text="Update email" />
+      <TableView fx:id="contactTable" layoutX="457.0" layoutY="150.0" prefHeight="343.0" prefWidth="733.0">
+        <columns>
+          <TableColumn fx:id="contIdColumn" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="contNameColumn" prefWidth="96.0" text="Name" />
+            <TableColumn fx:id="contNickNameColumn" prefWidth="92.0" text="Nickname" />
+            <TableColumn fx:id="contAddressColumn" prefWidth="77.0" text="Address" />
+            <TableColumn fx:id="contCellPhoneColumn" prefWidth="60.0" text="Cellphone" />
+            <TableColumn fx:id="contEmailColumn" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="contWebSiteColumn" prefWidth="75.0" text="Website" />
+            <TableColumn fx:id="contProfessionColumn" prefWidth="92.0" text="Profession" />
+            <TableColumn fx:id="contBirthDateColumn" prefWidth="115.0" text="Birthdate" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

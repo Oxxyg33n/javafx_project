@@ -1,25 +1,22 @@
-CREATE DATABASE addressbook;
-USE DATABASE addressbook;
+CREATE DATABASE contacts;
+USE DATABASE contacts;
 
 DROP TABLE IF EXISTS contact;
 
 CREATE TABLE contact(
-   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-   name VARCHAR(100) NOT NULL,
-   nick_name VARCHAR(20),
-   address VARCHAR(128),
-   home_phone VARCHAR(10),
-   work_phone VARCHAR(10),
-   cell_phone VARCHAR(10),
-   email VARCHAR(100),
-   birthday date,
-   web_site VARCHAR(100),
-   profession VARCHAR(100),
-   PRIMARY KEY (id)
+   CONTACT_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+   NAME VARCHAR(100) NOT NULL,
+   NICKNAME VARCHAR(20),
+   ADDRESS VARCHAR(128),
+   CELLPHONE_NUMBER VARCHAR(10),
+   EMAIL VARCHAR(10),
+   WEBSITE VARCHAR(10),
+   PROFESSION VARCHAR(100),
+   BIRTH_DATE VARCHAR(100),
+   PRIMARY KEY (CONTACT_ID)
 );
 
-INSERT INTO contact (name, nick_name, address, home_phone,
-   work_phone, cell_phone, email, birthday, web_site,profession)
+INSERT INTO contact (NAME, NICKNAME, ADDRESS, CELLPHONE_NUMBER,
+   EMAIL, BIRTH_DATE, WEBSITE,PROFESSION)
    VALUES ('Bruce Wayne', 'batman', 'XYZ Batcave', '9876543210',
-   '6278287326', '9182872363', 'batman@gmail.com',
-   '1976/02/03', 'batblog.com', 'Super Hero');
+   'batman@gmail.com','1976/02/03', 'batblog.com', 'Super Hero');
